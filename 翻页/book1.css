@@ -1,0 +1,82 @@
+*{
+	margin:0;
+	padding:0;
+}
+section{
+	width: 100%;
+	height: 500px;
+	background-color: #ccc;
+	padding: 40px 0;
+}
+.box{
+	width: 1000px;
+	height: 500px;
+	position: relative;
+	left: 0;right: 0;
+	margin: auto;
+	background: url('img/bookBg.png') no-repeat;
+	background-size: 100% 100%;
+	perspective: 1000px;
+}
+
+.first{
+	left: 0;
+	background: url('img/bookLeft.png') no-repeat 22px 10px;
+}
+.next,.last{
+	right: 0;
+	background: url('img/bookRight.png') no-repeat -10px 10px;
+}
+.bookpage{
+	width: 500px;
+	height: 500px;
+	position: absolute;
+	top:0;
+	background-size: 480px 480px;
+	transform-style: preserve-3d;
+	transition:2s linear transform;
+	transform-origin: 0 0;
+}
+.imgBox,.text{
+	width: 380px;
+	height: 380px;
+	position: absolute;
+	top:0;left: 0;right:0;bottom: 0;
+	margin:auto;
+}
+.text{
+	background-color: lightgray;
+}
+.imgBox img{
+	width: 100%;
+}
+a{
+	position: absolute;
+	width: 50px;
+	height: 100px;
+	background-color: rgba(0,0,0,0.5);
+	top:0;bottom: 0;
+	margin:auto;
+	font-size: 40px;
+	color:#fff;
+	z-index: 10;
+	line-height: 100px;
+	text-align: center;
+	display: none;
+	cursor: pointer;
+}
+.rightBtn{
+	right: 0;
+}
+.box:hover a{
+	display: block;
+}
+.active{
+	transform:rotateY(-180deg);
+}
+.bookpage:nth-of-type(2){
+	z-index: 6;
+}
+.bookpage:nth-of-type(2) .text{
+	z-index: 6;
+}
