@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title>demo</title>
+		<link rel="stylesheet" href="css/demo.css">
+		<script src='js/vue.js'></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="slider">
+				<div class="img"><img src="image/jdimg1.png"></div>
+				<div class="img"><img src="image/jdimg2.png"></div>
+				<div class="img"><img src="image/jdimg3.png"></div>
+				<div class="img"><img src="image/jdimg4.png"></div>
+				<div class="img"><img src="image/jdimg5.png"></div>
+				<div class="pointContainter">
+					<div class="point active"></div>
+					<div class="point"></div>
+					<div class="point"></div>
+					<div class="point"></div>
+					<div class="point"></div>
+				</div>
+			</div>
+			<div class="main">
+				<ul class="info">
+					<a href="#">
+						<li v-for='read in txt'>
+							<span>{{read.text}}</span>
+							<div class="infoImg"><img src="image/jdimg5.png"></div>
+						</li>
+					</a>
+				</ul>
+			</div>
+		</div>
+		
+	</body>
+	<script src='js/demo.js'></script>
+</html>
